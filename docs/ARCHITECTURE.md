@@ -2,7 +2,9 @@
 
 ## Goal
 
-MusicBridge is a local-first synchronization layer between Yandex Music and Spotify. It should feel like a one-time setup, not a recurring migration chore.
+Зелёночка is a local-first synchronization layer between Yandex Music and Spotify. It should feel like a one-time setup, not a recurring migration chore.
+
+The product is currently Yandex Music ↔ Spotify focused. Internal provider interfaces remain neutral so product branding does not hard-code engine architecture.
 
 ## Authority model
 
@@ -18,7 +20,7 @@ This asymmetry protects users from accidental loss and from Yandex liked-library
 
 ### Playlists
 
-Yandex playlists may have MusicBridge-owned Spotify mirrors.
+Yandex playlists may have Зелёночка-owned Spotify mirrors.
 
 For those mirrors only:
 - preserve track order
@@ -50,7 +52,7 @@ No secret or personal library data belongs in GitHub.
 
 1. Read Yandex snapshot.
 2. Resolve and save Yandex liked tracks into Spotify.
-3. Reconcile MusicBridge-owned playlist mirrors.
+3. Reconcile Зелёночка-owned playlist mirrors.
 4. Populate Yandex `Spotify Inbox` from Spotify-only likes.
 5. Opportunistically sync albums/artists.
 
