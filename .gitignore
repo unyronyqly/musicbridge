@@ -1,0 +1,46 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.token
+*.tokens
+*.secret
+*.secrets
+secrets.env
+.cache
+.spotify*
+*yandex*token*
+
+# MusicBridge local state
+state/
+data/
+archive/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+*.jsonl
+
+# Personal exports / snapshots
+exports/
+snapshots/
+unmatched.*
+missing.*
+
+# Build / packaging
+dist/
+build/
+*.egg-info/
+*.zip
