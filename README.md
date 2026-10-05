@@ -41,3 +41,27 @@ Never commit:
 ## License
 
 MIT.
+
+## Slice A — offline state and planner
+
+Python **3.12+**. This slice has no provider API calls, OAuth, background agent,
+macOS UI, or live mutation command. It does not read or change the legacy
+`~/MusicBridge` installation.
+
+From a clean checkout:
+
+```sh
+python3.12 -m venv .venv
+. .venv/bin/activate
+python -m pip install -e '.[test]'
+pytest
+zelenochka plan --fixture tests/fixtures/basic
+```
+
+The last command prints a readable action summary followed by a JSON plan.
+All fixture IDs and metadata are synthetic. Tests and planning need no remote
+service; installing development tools requires the usual package registry access.
+Runtime dependencies: **none** (stdlib SQLite). `pytest` is a test-only dependency.
+
+See [Slice A usage and boundaries](docs/SLICE_A.md) and the
+[accepted slice](https://github.com/unyronyqly/zelenochka/issues/2#issuecomment-5993708999).

@@ -1,0 +1,114 @@
+{
+  "source_provider": "yandex",
+  "target_provider": "spotify",
+  "now": 1000,
+  "tracks": [
+    {
+      "id": "a",
+      "title": "Synthetic a",
+      "artists": [
+        "Fixture artist"
+      ],
+      "liked": true
+    },
+    {
+      "id": "b",
+      "title": "Synthetic b",
+      "artists": [
+        "Fixture artist"
+      ],
+      "liked": true
+    },
+    {
+      "id": "c",
+      "title": "Synthetic c",
+      "artists": [
+        "Fixture artist"
+      ],
+      "liked": false
+    },
+    {
+      "id": "missing",
+      "title": "Synthetic missing",
+      "artists": [
+        "Fixture artist"
+      ],
+      "liked": true
+    }
+  ],
+  "matches": [
+    {
+      "source_id": "a",
+      "status": "matched",
+      "target_id": "sp-a"
+    },
+    {
+      "source_id": "b",
+      "status": "matched",
+      "target_id": "sp-b"
+    },
+    {
+      "source_id": "c",
+      "status": "matched",
+      "target_id": "sp-c"
+    },
+    {
+      "source_id": "missing",
+      "status": "unmatched",
+      "reason": "ambiguous",
+      "candidates": [
+        "candidate-1",
+        "candidate-2"
+      ]
+    }
+  ],
+  "source_playlists": [
+    {
+      "id": "source",
+      "name": "Synthetic source",
+      "tracks": [
+        "a",
+        "c",
+        "b"
+      ]
+    },
+    {
+      "id": "unowned-source",
+      "name": "Same name",
+      "tracks": [
+        "a"
+      ]
+    }
+  ],
+  "target_playlists": [
+    {
+      "id": "mirror",
+      "name": "Synthetic mirror",
+      "tracks": [
+        "sp-b",
+        "sp-a",
+        "stale"
+      ]
+    },
+    {
+      "id": "unrelated",
+      "name": "Same name",
+      "tracks": [
+        "manual"
+      ]
+    }
+  ],
+  "ownership": [
+    {
+      "source_id": "source",
+      "target_id": "mirror"
+    }
+  ],
+  "target_likes": [
+    "sp-b",
+    "spotify-only"
+  ],
+  "run": {
+    "id": "fixture-basic"
+  }
+}
